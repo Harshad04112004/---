@@ -1,0 +1,190 @@
+/* BEST CSS START (Optimized and Clean) */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9; /* Light Green/Blue */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #00796b; /* Tailor Teal/Green */
+            margin-bottom: 25px;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #004d40;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        /* Style for all form inputs and select */
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            border-color: #00796b;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+        }
+        .item-entry {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f8e9;
+            border-radius: 6px;
+        }
+        .item-entry input, .item-entry select {
+            margin-bottom: 0; /* Override default input margin */
+        }
+        /* Flex columns for item entry */
+        .item-entry .col-name { flex: 4; }
+        .item-entry .col-qty { flex: 2; }
+        .item-entry .col-price { flex: 3; }
+
+        /* Custom input style within the selector container */
+        .col-name .custom-item-name {
+            padding: 8px !important;
+            font-size: 14px !important;
+            margin-top: 5px !important;
+        }
+        
+        /* Add Item Button */
+        .btn-add {
+            background-color: #43a047;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .btn-add:hover {
+            background-color: #388e3c;
+        }
+
+        /* Generate Bill Button */
+        button[type="submit"] {
+            background-color: #1976d2;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button[type="submit"]:hover {
+            background-color: #1565c0;
+            transform: translateY(-1px);
+        }
+
+        /* Bill Output Area */
+        #billOutput {
+            margin-top: 30px;
+            padding: 25px;
+            border: 2px dashed #00796b;
+            border-radius: 10px;
+            background-color: #e0f2f1;
+        }
+        .bill-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bill-header h2 {
+            color: #004d40;
+            margin: 5px 0;
+            font-size: 1.8em;
+        }
+        .bill-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .bill-table th, .bill-table td {
+            border: 1px solid #b2dfdb;
+            padding: 12px;
+            text-align: left;
+        }
+        .bill-table th {
+            background-color: #00796b;
+            color: white;
+            font-weight: bold;
+        }
+        .bill-table tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .total-row td {
+            font-weight: bold;
+            font-size: 1.2em;
+            background-color: #80cbc4 !important;
+            color: #004d40;
+            text-align: right !important;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 25px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+        }
+        
+        /* Remove Item Button */
+        .remove-item {
+            background-color: #e53935;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .remove-item:hover {
+            background-color: #c62828;
+        }
+        .shop-info {
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+        /* END CSS */

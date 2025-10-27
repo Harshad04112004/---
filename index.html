@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ઓમકાર મેન્સ ટેલર શોપ - બિલ જનરેટર</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✂️ ઓમકાર મેન્સ ટેલર શોપ - બિલ જનરેટર</h1>
+
+        <form id="billForm">
+           <h2><i class="fas fa-user-circle"></i> ગ્રાહકની વિગતો (Customer Details)</h2>
+            <label for="name"><i class="fas fa-user"></i> ગ્રાહકનું નામ (Customer Name):</label>
+            <input type="text" id="name" placeholder="અહીં નામ દાખલ કરો" required>
+            <p id="nameError" class="error-message">કૃપા કરીને માન્ય નામ (ઓછામાં ઓછા 3 અક્ષરો) દાખલ કરો.</p>
+
+            <label for="mobile"><i class="fas fa-mobile-alt"></i> મોબાઇલ નંબર (Customer Mobile Number):</label>
+            <input type="text" id="mobile" maxlength="10" placeholder="10-અંકનો મોબાઇલ નંબર" required pattern="[0-9]{10}" title="કૃપા કરીને 10-અંકનો મોબાઇલ નંબર દાખલ કરો">
+            <p id="mobileError" class="error-message">કૃપા કરીને 10-અંકનો માન્ય મોબાઇલ નંબર દાખલ કરો.</p>
+            <hr>
+            <h2>આઇટમ વિગતો (Item Details)</h2>
+
+            <div class="item-entry" style="font-weight: bold; background-color: #cfd8dc;">
+                <div class="col-name">આઇટમનું નામ</div>
+                <div class="col-qty">જથ્થો</div>
+                <div class="col-price">કિંમત (રૂ.)</div>
+                <div style="width: 50px;"></div>
+            </div>
+
+            <div id="itemsContainer">
+                <div class="item-entry item-row">
+                    <div class="col-name">
+                        <select class="item-selector" onchange="toggleCustomInput(this)">
+                            <option value="શર્ટ અને પેન્ટ (Pant) " selected>શર્ટ (Shirt) અને પેન્ટ (Pant)</option>
+                            <option value="શર્ટ">શર્ટ (Shirt)</option>
+                            <option value="પેન્ટ">પેન્ટ (Pant)</option>
+                            <option value="લેંથ-શર્ટ">લેંથ-શર્ટ (Length-Shirt)</option>
+                            <option value="કુરતા">કુરતા (Kurta)</option>
+                            <option value="કસ્ટમ">અન્ય (Custom Item)</option>
+                        </select>
+                        <input type="text" class="custom-item-name item-name" placeholder="કસ્ટમ આઇટમનું નામ" style="display:none; margin-top: 5px;">
+                    </div>
+                    <input type="number" class="col-qty item-qty" value="1" min="1" required>
+                    <input type="number" class="col-price item-price" placeholder="રૂ. 700" min="0" required>
+                    <button type="button" class="remove-item" onclick="removeItem(this)">X</button>
+                </div>
+            </div>
+
+            <button type="button" class="btn-add" onclick="addItem()">+ વધુ આઇટમ ઉમેરો</button>
+
+            <button type="submit">✅ બિલ બનાવો અને જુઓ</button>
+        </form>
+
+        <div id="billOutput">
+            <p style="text-align: center;">બિલ બનાવવા માટે ઉપરની વિગતો ભરો અને "બિલ બનાવો અને જુઓ" બટન દબાવો.</p>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
